@@ -13,9 +13,18 @@
         <entry key="..\:/Users/Leena/Desktop/YouTube/app/src/main/res/layout/fragment_signed_in_library.xml" value="0.175" />
         <entry key="..\:/Users/Leena/Desktop/YouTube/app/src/main/res/layout/fragment_signed_in_subscribe.xml" value="0.175" />
         <entry key="..\:/Users/Leena/Desktop/YouTube/app/src/main/res/layout/fragment_subscribe.xml" value="0.175" />
+        <entry key="..\:/Temp/app/src/main/res/drawable/ic_outline_home_24.xml" value="0.15989583333333332" />
+        <entry key="..\:/Temp/app/src/main/res/layout/activity_function.xml" value="0.1334853090172239" />
+        <entry key="..\:/Temp/app/src/main/res/layout/activity_main.xml" value="0.12664640324214793" />
+        <entry key="..\:/Temp/app/src/main/res/layout/fragment_home_fagment.xml" value="0.1334853090172239" />
+        <entry key="..\:/Temp/app/src/main/res/layout/fragment_library.xml" value="0.1334853090172239" />
+        <entry key="..\:/Temp/app/src/main/res/layout/fragment_subscribe.xml" value="0.1334853090172239" />
+        <entry key="..\:/YouTube/app/src/main/res/layout/fragment_home_fagment.xml" value="0.1828125" />
+        <entry key="..\:/YouTube/app/src/main/res/layout/item_layout.xml" value="0.2" />
       </map>
     </option>
   </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

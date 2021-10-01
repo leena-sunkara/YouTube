@@ -9,6 +9,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.masai.youtube.Home.HomeFagment;
+import com.masai.youtube.Subscription.SubscribeFragment;
+
 public class Function extends AppCompatActivity implements View.OnClickListener {
 
     private ImageView home;

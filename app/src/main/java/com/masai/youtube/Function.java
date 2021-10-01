@@ -9,6 +9,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.masai.youtube.Home.HomeFagment;
+import com.masai.youtube.Subscription.SubscribeFragment;
+
 public class Function extends AppCompatActivity implements View.OnClickListener {
 
     private ImageView home;

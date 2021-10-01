@@ -24,13 +24,13 @@ private ArrayList<Model_Subscription>arrayList2=new ArrayList<>();
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_subscribe, container, false);
+        return inflater.inflate(R.layout.fragment_signed_in_subscribe, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        recyclerView2=view.findViewById(R.id.recycler2);
+        recyclerView2=view.findViewById(R.id.recyclerView);
         setData();
         setREcyclerview();
     }

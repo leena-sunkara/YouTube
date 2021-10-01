@@ -1,4 +1,4 @@
-package com.masai.youtube;
+package com.masai.youtube.library;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,6 +26,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.masai.youtube.R;
 
 public class LibraryFragment extends Fragment {
 

@@ -1,10 +1,13 @@
-package com.masai.youtube;
+package com.masai.youtube.splashscreen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.masai.youtube.R;
+import com.masai.youtube.home.Function;
 
 public class MainActivity extends AppCompatActivity {
 

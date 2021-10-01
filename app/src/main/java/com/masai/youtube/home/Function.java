@@ -1,4 +1,4 @@
-package com.masai.youtube;
+package com.masai.youtube.home;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,11 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+
+import com.masai.youtube.library.LibraryFragment;
+import com.masai.youtube.R;
+import com.masai.youtube.shorts.ShortsActivity;
+import com.masai.youtube.subscriptions.SubscribeFragment;
 
 public class Function extends AppCompatActivity implements View.OnClickListener {
 
@@ -64,14 +69,14 @@ public class Function extends AppCompatActivity implements View.OnClickListener 
 
     private void addHome() {
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        HomeFagment homeFagment = new HomeFagment();
-        transaction.add(R.id.flContainer, homeFagment, "fragmentA").commit();
+        HomeFragment homeFragment = new HomeFragment();
+        transaction.add(R.id.flContainer, homeFragment, "fragmentA").commit();
     }
 
     private void addHomeAgain() {
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        HomeFagment homeFagment = new HomeFagment();
-        transaction.add(R.id.flContainer, homeFagment, "fragmentA").addToBackStack("aaa").commit();
+        HomeFragment homeFragment = new HomeFragment();
+        transaction.add(R.id.flContainer, homeFragment, "fragmentA").addToBackStack("aaa").commit();
     }
 
     private void addSubscribe() {

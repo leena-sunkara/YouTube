@@ -18,6 +18,9 @@
         android:theme="@style/Theme.Design.Light.NoActionBar"
         tools:ignore="AllowBackup">
         <activity
+            android:name=".Home.VideoPlayActivity"
+            android:exported="true" />
+        <activity
             android:name=".shorts.ShortsActivity"
             android:exported="true" />
         <activity

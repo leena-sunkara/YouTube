@@ -169,6 +169,7 @@
             android:textSize="16dp" />
 
         <TextView
+
             android:id="@+id/tSubscribe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -189,5 +190,11 @@
             android:layout_toRightOf="@+id/cName"
             android:text="SUBSCRIBE"
             android:textColor="#EF0606" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tSubscribe"
+            android:layout_marginTop="5dp"
+            android:id="@+id/recyclerData"/>
     </RelativeLayout>
 </RelativeLayout>

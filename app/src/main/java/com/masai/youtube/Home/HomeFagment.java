@@ -66,6 +66,7 @@ public class HomeFagment extends Fragment implements ItemClickListener {
     public void ItemClicked(Model model, int position) {
 
         Intent intent = new Intent(getContext(), VideoPlayActivity.class);
+
         String video, videoName, totalViewer,channelName,tSubscribe;
         int iconImage;
 

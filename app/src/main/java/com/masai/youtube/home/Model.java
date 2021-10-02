@@ -1,18 +1,18 @@
-package com.masai.youtube.home;
+package com.masai.youtube.Home;
 
 public class Model {
-    int image, firstImage;
+    int image,firstImage;
     String VideoUrl;
-    String VideoName, Viewers, ChannelName, TotalSubscribers;
+    String VideoName,Viewer,ChannelName,TotalSubscribe;
 
-    public Model(String VideoUrl, int image, String videoName, String viewers, int firstImage, String ChannelName, String TotalSubscribers) {
+    public Model(String VideoUrl,int image, String videoName, String viewer,int firstImage,String ChannelName,String TotalSubscribe) {
         this.image = image;
-        this.VideoUrl = VideoUrl;
+        this.VideoUrl=VideoUrl;
         VideoName = videoName;
-        Viewers = viewers;
-        this.firstImage = firstImage;
-        this.ChannelName = ChannelName;
-        this.TotalSubscribers = TotalSubscribers;
+        Viewer = viewer;
+        this.firstImage=firstImage;
+       this.ChannelName=ChannelName;
+        this.TotalSubscribe=TotalSubscribe;
     }
 
     public int getImage() {
@@ -23,8 +23,8 @@ public class Model {
         return ChannelName;
     }
 
-    public String getTotalSubscribers() {
-        return TotalSubscribers;
+    public String getTotalSubscribe() {
+        return TotalSubscribe;
     }
 
     public int getFirstImage() {
@@ -35,10 +35,9 @@ public class Model {
         return VideoName;
     }
 
-    public String getViewers() {
-        return Viewers;
+    public String getViewer() {
+        return Viewer;
     }
-
     public String getVideoUrl() {
         return VideoUrl;
     }

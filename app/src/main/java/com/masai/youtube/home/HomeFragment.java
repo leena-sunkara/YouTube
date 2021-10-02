@@ -1,4 +1,4 @@
-package com.masai.youtube.Home;
+package com.masai.youtube.home;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,8 +6,6 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -17,11 +15,10 @@ import android.view.ViewGroup;
 
 import com.masai.youtube.R;
 
-import java.util.ArrayList;
 import java.util.Vector;
 
 
-public class HomeFagment extends Fragment implements ItemClickListener {
+public class HomeFragment extends Fragment implements ItemClickListener {
     private RecyclerView recyclerView;
     private Vector<Model> arrayList = new Vector<>();
 
@@ -29,7 +26,7 @@ public class HomeFagment extends Fragment implements ItemClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home_fagment, container, false);
+        return inflater.inflate(R.layout.fragment_home, container, false);
     }
 
     @Override
@@ -73,9 +70,9 @@ public class HomeFagment extends Fragment implements ItemClickListener {
         video = model.getVideoUrl();
         iconImage = model.getImage();
         videoName = model.getVideoName();
-        totalViewer = model.getViewer();
+        totalViewer = model.getViewers();
         channelName=model.getChannelName();
-        tSubscribe=model.getTotalSubscribe();
+        tSubscribe=model.getTotalSubscribers();
 
         intent.putExtra("video", video);
         intent.putExtra("iconImage", iconImage);

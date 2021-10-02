@@ -1,25 +1,21 @@
-package com.masai.youtube.Home;
+package com.masai.youtube.home;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
-import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
 import com.masai.youtube.R;
 
 import java.util.Vector;
 
-public class VideoPlayActivity extends AppCompatActivity implements ItemClickListener{
+public class VideoPlayActivity extends AppCompatActivity implements com.masai.youtube.home.ItemClickListener {
 
     private WebView webView;
     private TextView textView1, textView2;
@@ -89,9 +85,9 @@ public class VideoPlayActivity extends AppCompatActivity implements ItemClickLis
         video = model.getVideoUrl();
         iconImage = model.getImage();
         videoName = model.getVideoName();
-        totalViewer = model.getViewer();
+        totalViewer = model.getViewers();
         channelName=model.getChannelName();
-        tSubscribe=model.getTotalSubscribe();
+        tSubscribe=model.getTotalSubscribers();
 
         intent.putExtra("video", video);
         intent.putExtra("iconImage", iconImage);

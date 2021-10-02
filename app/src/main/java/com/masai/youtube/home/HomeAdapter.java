@@ -1,4 +1,4 @@
-package com.masai.youtube.Home;
+package com.masai.youtube.home;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.masai.youtube.R;
+import com.masai.youtube.home.ItemClickListener;
+import com.masai.youtube.home.Model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,10 +60,10 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder
             super(itemView);
             this.itemClickListener = itemClickListener;
 
-            firstImage = itemView.findViewById(R.id.video1);
+            firstImage = itemView.findViewById(R.id.video);
             imageView = itemView.findViewById(R.id.youtuberImage);
             textView = itemView.findViewById(R.id.videoName);
-            textView2 = itemView.findViewById(R.id.youtubeview);
+            textView2 = itemView.findViewById(R.id.youtubeviews);
 
             relativeLayout = itemView.findViewById(R.id.relative);
 
@@ -72,7 +74,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder
             firstImage.setImageResource(model.getFirstImage());
             imageView.setImageResource(model.getImage());
             textView.setText(model.getVideoName());
-            textView2.setText(model.getViewer());
+            textView2.setText(model.getViewers());
 
 
             relativeLayout.setOnClickListener(new View.OnClickListener() {

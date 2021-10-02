@@ -87,11 +87,12 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/flContainer"
+        android:name="com.google.android.youtube.player.YouTubePlayerSupportFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:name="com.google.android.youtube.player.YouTubePlayerSupportFragment"
         app:layout_constraintBottom_toTopOf="@+id/bottomView"
-        app:layout_constraintTop_toBottomOf="@+id/topView" />
+        app:layout_constraintTop_toBottomOf="@+id/topView"
+        tools:layout="@layout/fragment_home" />
 
 
     <androidx.cardview.widget.CardView

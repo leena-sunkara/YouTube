@@ -6,60 +6,61 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:id="@+id/cardview2"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="80dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
         app:cardCornerRadius="80dp">
         <ImageView
-            android:layout_width="75dp"
-            android:layout_height="75dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:src="@mipmap/ic_launcher"
-            android:id="@+id/subscriptImage"/>
+            android:id="@+id/channelImage"/>
     </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/channelName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="45dp"
+        android:layout_marginStart="45dp"
         android:layout_marginTop="10dp"
-        android:layout_toRightOf="@+id/cardview2"
+        android:layout_toEndOf="@+id/cardview2"
         android:text="Aaj Tak"
         android:textColor="@color/black"
-        android:textSize="17dp" />
+        android:textSize="17sp" />
 
     <TextView
-        android:id="@+id/viewer"
+        android:id="@+id/viewers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/channelName"
-        android:layout_marginLeft="45dp"
+        android:layout_marginStart="45dp"
         android:layout_marginTop="10dp"
-        android:layout_toRightOf="@+id/cardview2"
+        android:layout_toEndOf="@+id/cardview2"
         android:text="Aaj Tak"
-        android:textSize="15dp" />
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/uploadVideo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/viewer"
-        android:layout_marginLeft="45dp"
-        android:layout_toRightOf="@+id/cardview2"
+        android:layout_below="@id/viewers"
+        android:layout_marginStart="45dp"
+        android:layout_toEndOf="@+id/cardview2"
         android:text="Aaj Tak"
-        android:textSize="15dp" />
+        android:textSize="15sp" />
 
     <TextView
-        android:id="@+id/subcribe"
+        android:id="@+id/subscribe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/uploadVideo"
-        android:layout_marginLeft="45dp"
+        android:layout_marginStart="45dp"
         android:layout_marginTop="10dp"
-        android:layout_toRightOf="@+id/cardview2"
+        android:layout_toEndOf="@+id/cardview2"
         android:text="Aaj Tak"
         android:textColor="#F40606"
-        android:textSize="17dp" />
+        android:textSize="17sp" />
 </RelativeLayout>

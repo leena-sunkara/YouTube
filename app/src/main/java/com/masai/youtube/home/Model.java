@@ -1,45 +1,46 @@
 package com.masai.youtube.home;
 
 public class Model {
-    int video, FirstImage;
-    String VideoName, Viewer;
+    int image, firstImage;
+    String VideoUrl;
+    String VideoName, Viewers, ChannelName, TotalSubscribers;
 
-    public Model(int video, int firstImage, String videoName, String viewer) {
-        this.video = video;
-        FirstImage = firstImage;
+    public Model(String VideoUrl, int image, String videoName, String viewers, int firstImage, String ChannelName, String TotalSubscribers) {
+        this.image = image;
+        this.VideoUrl = VideoUrl;
         VideoName = videoName;
-        Viewer = viewer;
+        Viewers = viewers;
+        this.firstImage = firstImage;
+        this.ChannelName = ChannelName;
+        this.TotalSubscribers = TotalSubscribers;
     }
 
-    public int getVideo() {
-        return video;
+    public int getImage() {
+        return image;
     }
 
-    public void setVideo(int video) {
-        this.video = video;
+    public String getChannelName() {
+        return ChannelName;
+    }
+
+    public String getTotalSubscribers() {
+        return TotalSubscribers;
     }
 
     public int getFirstImage() {
-        return FirstImage;
-    }
-
-    public void setFirstImage(int firstImage) {
-        FirstImage = firstImage;
+        return firstImage;
     }
 
     public String getVideoName() {
         return VideoName;
     }
 
-    public void setVideoName(String videoName) {
-        VideoName = videoName;
+    public String getViewers() {
+        return Viewers;
     }
 
-    public String getViewer() {
-        return Viewer;
+    public String getVideoUrl() {
+        return VideoUrl;
     }
 
-    public void setViewer(String viewer) {
-        Viewer = viewer;
-    }
 }

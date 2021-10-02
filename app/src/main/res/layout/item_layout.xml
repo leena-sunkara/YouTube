@@ -1,63 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/white"
     android:orientation="vertical">
 
-    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+    <ImageView
         android:id="@+id/video"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        app:autoPlay="true"
-        app:showYouTubeButton="false"
-        app:videoId="jA7pyshKpCs" />
-
-    <ImageView
-        android:id="@+id/videoThumbnail"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:scaleType="fitXY" />
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_below="@id/videoThumbnail"
-        android:layout_marginStart="10dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/video"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        app:cardCornerRadius="50dp">
+        app:cardCornerRadius="40dp">
 
         <ImageView
-            android:id="@+id/channelImage"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:src="@drawable/masiaicon" />
-
+            android:id="@+id/youtuberImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/ic_launcher" />
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/videoTitle"
+        android:id="@+id/videoName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/videoThumbnail"
+        android:layout_below="@id/video"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:layout_toEndOf="@id/cardview"
+        android:layout_toEndOf="@+id/cardview"
         android:textColor="@color/black"
-        android:textSize="15sp" />
+        android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/channelTitle"
+        android:id="@+id/youtubeviews"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/videoTitle"
-        android:layout_marginHorizontal="10dp"
+        android:layout_below="@+id/videoName"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
         android:layout_toEndOf="@+id/cardview"
         android:paddingBottom="20dp"
         android:textSize="12sp" />

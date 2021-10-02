@@ -1,4 +1,4 @@
-package com.masai.youtube.subscriptions;
+package com.masai.youtube.subscription;
 
 import android.content.Intent;
 import android.os.Bundle;

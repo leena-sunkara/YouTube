@@ -1,8 +1,10 @@
-package com.masai.youtube;
+package com.masai.youtube.shorts;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.masai.youtube.R;
 
 public class ShortsActivity extends AppCompatActivity {
 

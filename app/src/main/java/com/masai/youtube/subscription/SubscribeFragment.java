@@ -1,4 +1,4 @@
-package com.masai.youtube;
+package com.masai.youtube.subscription;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,8 +26,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.masai.youtube.R;
 
-public class LibraryFragment extends Fragment {
+public class SubscribeFragment extends Fragment {
 
     private Button button;
     private static final String TAG = "GoogleActivity";
@@ -47,7 +48,7 @@ public class LibraryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_library, container, false);
+        return inflater.inflate(R.layout.fragment_subscribe, container, false);
     }
 
     @Override
@@ -120,7 +121,7 @@ public class LibraryFragment extends Fragment {
     private void updateUI(FirebaseUser user) {
         if (user != null) {
             FragmentTransaction fragmentTransaction = this.getFragmentManager().beginTransaction();
-            Fragment fragment = new SignedInLibraryFragment();
+            Fragment fragment = new SignedInSubscribeFragment();
             fragmentTransaction.replace(R.id.flContainer, fragment).commit();
         }
     }

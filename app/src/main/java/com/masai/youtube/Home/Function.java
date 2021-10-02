@@ -1,5 +1,6 @@
-package com.masai.youtube;
+package com.masai.youtube.home;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,8 +10,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.masai.youtube.Home.HomeFagment;
-import com.masai.youtube.Subscription.SubscribeFragment;
+import com.masai.youtube.R;
+import com.masai.youtube.library.LibraryFragment;
+import com.masai.youtube.shorts.ShortsActivity;
+import com.masai.youtube.subscription.SubscribeFragment;
 
 public class Function extends AppCompatActivity implements View.OnClickListener {
 
@@ -44,9 +47,9 @@ public class Function extends AppCompatActivity implements View.OnClickListener 
         library.setOnClickListener(this);
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
-
         int id = v.getId();
         switch (id) {
             case R.id.ivHome:
@@ -67,25 +70,25 @@ public class Function extends AppCompatActivity implements View.OnClickListener 
 
     private void addHome() {
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        HomeFagment homeFagment = new HomeFagment();
-        transaction.add(R.id.flContainer, homeFagment, "fragmentA").commit();
+        HomeFragment homeFragment = new HomeFragment();
+        transaction.add(R.id.flContainer, homeFragment, "fragmentHome").commit();
     }
 
     private void addHomeAgain() {
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        HomeFagment homeFagment = new HomeFagment();
-        transaction.add(R.id.flContainer, homeFagment, "fragmentA").addToBackStack("aaa").commit();
+        HomeFragment homeFragment = new HomeFragment();
+        transaction.add(R.id.flContainer, homeFragment, "fragmentHomeAgain").addToBackStack("fragHomeAgain").commit();
     }
 
     private void addSubscribe() {
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         SubscribeFragment subscribeFragment = new SubscribeFragment();
-        transaction.add(R.id.flContainer, subscribeFragment, "fragmentB").addToBackStack("aaa").commit();
+        transaction.add(R.id.flContainer, subscribeFragment, "fragmentSub").addToBackStack("fragSub").commit();
     }
 
     private void addLibrary() {
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         LibraryFragment libraryFragment = new LibraryFragment();
-        transaction.add(R.id.flContainer, libraryFragment, "fragmentB").addToBackStack("aaa").commit();
+        transaction.add(R.id.flContainer, libraryFragment, "fragmentLib").addToBackStack("fragLib").commit();
     }
 }

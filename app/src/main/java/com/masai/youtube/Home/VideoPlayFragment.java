@@ -1,4 +1,4 @@
-package com.masai.youtube.Home;
+package com.masai.youtube.home;
 
 import android.os.Bundle;
 

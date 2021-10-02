@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:weightSum="2"
     android:background="@color/white"
-    tools:context=".SignedInSubscribeFragment">
+    tools:context=".subscription.SignedInSubscribeFragment">
 
     <LinearLayout
         android:layout_width="match_parent"

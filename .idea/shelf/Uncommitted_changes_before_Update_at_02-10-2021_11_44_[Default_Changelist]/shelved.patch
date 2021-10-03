@@ -1,0 +1,147 @@
+Index: app/src/main/java/com/masai/youtube/Home/HomeAdapter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.masai.youtube.Home;\r\n\r\nimport android.view.LayoutInflater;\r\nimport android.view.View;\r\nimport android.view.ViewGroup;\r\nimport android.webkit.WebChromeClient;\r\nimport android.webkit.WebView;\r\nimport android.widget.ImageView;\r\nimport android.widget.RelativeLayout;\r\nimport android.widget.TextView;\r\n\r\nimport androidx.annotation.NonNull;\r\nimport androidx.recyclerview.widget.RecyclerView;\r\n\r\nimport com.masai.youtube.R;\r\n\r\nimport java.util.ArrayList;\r\nimport java.util.List;\r\n\r\npublic class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder> {\r\n    List<Model> arrayList;\r\n    ItemClickListener itemClickListener;\r\n\r\n    public HomeAdapter(List<Model> arrayList, ItemClickListener itemClickListener) {\r\n        this.arrayList = arrayList;\r\n        this.itemClickListener = itemClickListener;\r\n    }\r\n\r\n    @NonNull\r\n    @Override\r\n    public HomeViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {\r\n        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_layout, parent, false);\r\n\r\n        return new HomeViewHolder(view, itemClickListener);\r\n    }\r\n\r\n    @Override\r\n    public void onBindViewHolder(@NonNull HomeViewHolder holder, int position) {\r\n        Model model = arrayList.get(position);\r\n        holder.setData(model);\r\n    }\r\n\r\n    @Override\r\n    public int getItemCount() {\r\n        return arrayList.size();\r\n    }\r\n\r\n    public class HomeViewHolder extends RecyclerView.ViewHolder {\r\n        ImageView imageView;\r\n        TextView textView, textView2;\r\n\r\n        ImageView firstImage;\r\n        ItemClickListener itemClickListener;\r\n        RelativeLayout relativeLayout;\r\n\r\n        public HomeViewHolder(@NonNull View itemView, ItemClickListener itemClickListener) {\r\n            super(itemView);\r\n            this.itemClickListener = itemClickListener;\r\n\r\n            firstImage = itemView.findViewById(R.id.video1);\r\n            imageView = itemView.findViewById(R.id.youtuberImage);\r\n            textView = itemView.findViewById(R.id.videoName);\r\n            textView2 = itemView.findViewById(R.id.youtubeview);\r\n\r\n            relativeLayout = itemView.findViewById(R.id.relative);\r\n\r\n\r\n        }\r\n\r\n        public void setData(Model model) {\r\n            firstImage.setImageResource(model.getFirstImage());\r\n            imageView.setImageResource(model.getImage());\r\n            textView.setText(model.getVideoName());\r\n            textView2.setText(model.getViewer());\r\n\r\n\r\n            relativeLayout.setOnClickListener(new View.OnClickListener() {\r\n                @Override\r\n                public void onClick(View v) {\r\n                    itemClickListener.ItemClicked(model, getAdapterPosition());\r\n                }\r\n            });\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/masai/youtube/Home/HomeAdapter.java b/app/src/main/java/com/masai/youtube/Home/HomeAdapter.java
+--- a/app/src/main/java/com/masai/youtube/Home/HomeAdapter.java	(revision 85f952db3e23ba58db26dbfc19eea2d15ee5e1ed)
++++ b/app/src/main/java/com/masai/youtube/Home/HomeAdapter.java	(date 1633105465019)
+@@ -1,10 +1,8 @@
+-package com.masai.youtube.Home;
++package com.masai.youtube.home;
+ 
+ import android.view.LayoutInflater;
+ import android.view.View;
+ import android.view.ViewGroup;
+-import android.webkit.WebChromeClient;
+-import android.webkit.WebView;
+ import android.widget.ImageView;
+ import android.widget.RelativeLayout;
+ import android.widget.TextView;
+@@ -14,7 +12,6 @@
+ 
+ import com.masai.youtube.R;
+ 
+-import java.util.ArrayList;
+ import java.util.List;
+ 
+ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder> {
+@@ -30,7 +27,6 @@
+     @Override
+     public HomeViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_layout, parent, false);
+-
+         return new HomeViewHolder(view, itemClickListener);
+     }
+ 
+@@ -45,7 +41,7 @@
+         return arrayList.size();
+     }
+ 
+-    public class HomeViewHolder extends RecyclerView.ViewHolder {
++    public static class HomeViewHolder extends RecyclerView.ViewHolder {
+         ImageView imageView;
+         TextView textView, textView2;
+ 
+@@ -57,23 +53,18 @@
+             super(itemView);
+             this.itemClickListener = itemClickListener;
+ 
+-            firstImage = itemView.findViewById(R.id.video1);
++            firstImage = itemView.findViewById(R.id.video);
+             imageView = itemView.findViewById(R.id.youtuberImage);
+             textView = itemView.findViewById(R.id.videoName);
+-            textView2 = itemView.findViewById(R.id.youtubeview);
+-
++            textView2 = itemView.findViewById(R.id.youtubeviews);
+             relativeLayout = itemView.findViewById(R.id.relative);
+-
+-
+         }
+ 
+         public void setData(Model model) {
+             firstImage.setImageResource(model.getFirstImage());
+             imageView.setImageResource(model.getImage());
+             textView.setText(model.getVideoName());
+-            textView2.setText(model.getViewer());
+-
+-
++            textView2.setText(model.getViewers());
+             relativeLayout.setOnClickListener(new View.OnClickListener() {
+                 @Override
+                 public void onClick(View v) {
+@@ -82,4 +73,4 @@
+             });
+         }
+     }
+-}
++}
+\ No newline at end of file
+Index: app/src/main/java/com/masai/youtube/Home/Model.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.masai.youtube.Home;\r\n\r\npublic class Model {\r\n    int image,firstImage;\r\n    String VideoUrl;\r\n    String VideoName,Viewer,ChannelName,TotalSubscribe;\r\n\r\n    public Model(String VideoUrl,int image, String videoName, String viewer,int firstImage,String ChannelName,String TotalSubscribe) {\r\n        this.image = image;\r\n        this.VideoUrl=VideoUrl;\r\n        VideoName = videoName;\r\n        Viewer = viewer;\r\n        this.firstImage=firstImage;\r\n       this.ChannelName=ChannelName;\r\n        this.TotalSubscribe=TotalSubscribe;\r\n    }\r\n\r\n    public int getImage() {\r\n        return image;\r\n    }\r\n\r\n    public String getChannelName() {\r\n        return ChannelName;\r\n    }\r\n\r\n    public String getTotalSubscribe() {\r\n        return TotalSubscribe;\r\n    }\r\n\r\n    public int getFirstImage() {\r\n        return firstImage;\r\n    }\r\n\r\n    public String getVideoName() {\r\n        return VideoName;\r\n    }\r\n\r\n    public String getViewer() {\r\n        return Viewer;\r\n    }\r\n    public String getVideoUrl() {\r\n        return VideoUrl;\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/masai/youtube/Home/Model.java b/app/src/main/java/com/masai/youtube/Home/Model.java
+--- a/app/src/main/java/com/masai/youtube/Home/Model.java	(revision 85f952db3e23ba58db26dbfc19eea2d15ee5e1ed)
++++ b/app/src/main/java/com/masai/youtube/Home/Model.java	(date 1633105464942)
+@@ -1,18 +1,18 @@
+-package com.masai.youtube.Home;
++package com.masai.youtube.home;
+ 
+ public class Model {
+-    int image,firstImage;
++    int image, firstImage;
+     String VideoUrl;
+-    String VideoName,Viewer,ChannelName,TotalSubscribe;
++    String VideoName, Viewers, ChannelName, TotalSubscribers;
+ 
+-    public Model(String VideoUrl,int image, String videoName, String viewer,int firstImage,String ChannelName,String TotalSubscribe) {
++    public Model(String VideoUrl, int image, String videoName, String viewers, int firstImage, String ChannelName, String TotalSubscribers) {
+         this.image = image;
+-        this.VideoUrl=VideoUrl;
++        this.VideoUrl = VideoUrl;
+         VideoName = videoName;
+-        Viewer = viewer;
+-        this.firstImage=firstImage;
+-       this.ChannelName=ChannelName;
+-        this.TotalSubscribe=TotalSubscribe;
++        Viewers = viewers;
++        this.firstImage = firstImage;
++        this.ChannelName = ChannelName;
++        this.TotalSubscribers = TotalSubscribers;
+     }
+ 
+     public int getImage() {
+@@ -23,8 +23,8 @@
+         return ChannelName;
+     }
+ 
+-    public String getTotalSubscribe() {
+-        return TotalSubscribe;
++    public String getTotalSubscribers() {
++        return TotalSubscribers;
+     }
+ 
+     public int getFirstImage() {
+@@ -35,11 +35,12 @@
+         return VideoName;
+     }
+ 
+-    public String getViewer() {
+-        return Viewer;
++    public String getViewers() {
++        return Viewers;
+     }
++
+     public String getVideoUrl() {
+         return VideoUrl;
+     }
+ 
+-}
++}
+\ No newline at end of file

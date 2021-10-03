@@ -3,6 +3,8 @@ package com.masai.youtube.home;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebChromeClient;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -12,7 +14,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.masai.youtube.R;
+import com.masai.youtube.home.ItemClickListener;
+import com.masai.youtube.home.Model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder> {
@@ -28,6 +33,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder
     @Override
     public HomeViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_layout, parent, false);
+
         return new HomeViewHolder(view, itemClickListener);
     }
 
@@ -42,7 +48,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder
         return arrayList.size();
     }
 
-    public static class HomeViewHolder extends RecyclerView.ViewHolder {
+    public class HomeViewHolder extends RecyclerView.ViewHolder {
         ImageView imageView;
         TextView textView, textView2;
 
@@ -58,7 +64,10 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder
             imageView = itemView.findViewById(R.id.youtuberImage);
             textView = itemView.findViewById(R.id.videoName);
             textView2 = itemView.findViewById(R.id.youtubeviews);
+
             relativeLayout = itemView.findViewById(R.id.relative);
+
+
         }
 
         public void setData(Model model) {
@@ -66,6 +75,8 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder
             imageView.setImageResource(model.getImage());
             textView.setText(model.getVideoName());
             textView2.setText(model.getViewers());
+
+
             relativeLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

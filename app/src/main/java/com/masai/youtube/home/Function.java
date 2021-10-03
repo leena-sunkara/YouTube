@@ -1,7 +1,9 @@
 package com.masai.youtube.home;
 
 import android.annotation.SuppressLint;
+import android.app.Notification;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -11,6 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.masai.youtube.R;
 import com.masai.youtube.library.LibraryFragment;
 import com.masai.youtube.shorts.ShortsActivity;
@@ -31,7 +35,6 @@ public class Function extends AppCompatActivity implements View.OnClickListener 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_function);
-
         fragmentManager = getSupportFragmentManager();
         initViews();
     }
@@ -49,6 +52,17 @@ public class Function extends AppCompatActivity implements View.OnClickListener 
         upload.setOnClickListener(this);
         sub.setOnClickListener(this);
         library.setOnClickListener(this);
+
+        GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(this);
+        if (acct != null) {
+            String personName = acct.getDisplayName();
+            String personGivenName = acct.getGivenName();
+            String personFamilyName = acct.getFamilyName();
+            String personEmail = acct.getEmail();
+            String personId = acct.getId();
+            Uri personPhoto = acct.getPhotoUrl();
+            user.setImageURI(personPhoto);
+        }
 
         user.setOnClickListener(new View.OnClickListener() {
             @Override

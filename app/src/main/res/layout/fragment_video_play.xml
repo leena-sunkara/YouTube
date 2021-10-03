@@ -21,7 +21,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_below="@+id/videoPlay"
-            android:layout_marginLeft="10dp"
+           android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             app:cardCornerRadius="50dp">
 
@@ -38,22 +38,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/videoPlay"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_toRightOf="@+id/cardview"
             android:textColor="@color/black"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/YOUTUBERVIEW"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/VIDEONAME"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_toRightOf="@+id/cardview"
             android:paddingBottom="20dp"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
     </RelativeLayout>
 </RelativeLayout>

@@ -18,6 +18,12 @@
         android:theme="@style/Theme.Design.Light.NoActionBar"
         tools:ignore="AllowBackup">
         <activity
+            android:name=".home.SignedinUserAccount"
+            android:exported="true" />
+        <activity
+            android:name=".home.UserAccount"
+            android:exported="true" />
+        <activity
             android:name=".home.VideoPlayActivity"
             android:exported="true" />
         <activity

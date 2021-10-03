@@ -10,7 +10,7 @@
         android:id="@+id/video"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        app:autoPlay="true"
+        app:autoPlay="false"
         app:showYouTubeButton="false"
         app:videoId="jA7pyshKpCs" />
 
@@ -50,15 +50,29 @@
 
     <TextView
         android:id="@+id/channelTitle"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/videoTitle"
         android:layout_marginHorizontal="10dp"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:layout_toEndOf="@+id/cardview"
+        android:paddingBottom="20dp"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/publishTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/videoTitle"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/channelTitle"
         android:paddingBottom="20dp"
         android:textSize="12sp" />
 

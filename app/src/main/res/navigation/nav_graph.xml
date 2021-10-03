@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/signedinUserAccount">
+
+    <activity
+        android:id="@+id/signedinUserAccount"
+        android:name="com.masai.youtube.home.SignedinUserAccount"
+        android:label="activity_signedin_user_account"
+        tools:layout="@layout/activity_signedin_user_account" />
+</navigation>

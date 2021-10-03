@@ -1,10 +1,12 @@
 package com.masai.youtube.subscription;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,6 +17,7 @@ import java.util.ArrayList;
 
 public class SubscribeAdapter extends RecyclerView.Adapter<SubscribeAdapter.SubscriptionViewHolder> {
     private ArrayList<ModelSubscription> arrayList2;
+    public static boolean channelSubscribed;
 
     public SubscribeAdapter(ArrayList<ModelSubscription> arrayList2) {
         this.arrayList2 = arrayList2;
@@ -53,6 +56,16 @@ public class SubscribeAdapter extends RecyclerView.Adapter<SubscribeAdapter.Subs
             subscribers = itemView.findViewById(R.id.viewers);
             totalVideos = itemView.findViewById(R.id.uploadVideo);
             subButton = itemView.findViewById(R.id.subscribe);
+            subButton.setOnClickListener(new View.OnClickListener() {
+                @SuppressLint("ResourceAsColor")
+                @Override
+                public void onClick(View v) {
+                    subButton.setText("SUBSCRIBED");
+                    subButton.setTextColor(R.color.black);
+                    Toast.makeText(v.getContext(), "Subscription Added", Toast.LENGTH_SHORT).show();
+                    channelSubscribed = true;
+                }
+            });
         }
 
         public void DataSet(ModelSubscription model_subscription) {

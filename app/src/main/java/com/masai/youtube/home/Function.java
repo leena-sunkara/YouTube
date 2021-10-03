@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -13,6 +14,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.masai.youtube.R;
 import com.masai.youtube.library.LibraryFragment;
 import com.masai.youtube.shorts.ShortsActivity;
+import com.masai.youtube.subscription.SubscribeAdapter;
 import com.masai.youtube.subscription.SubscribeFragment;
 
 public class Function extends AppCompatActivity implements View.OnClickListener {
@@ -23,6 +25,7 @@ public class Function extends AppCompatActivity implements View.OnClickListener 
     private ImageView sub;
     private ImageView library;
     private FragmentManager fragmentManager;
+    private ImageView user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,12 +42,21 @@ public class Function extends AppCompatActivity implements View.OnClickListener 
         upload = findViewById(R.id.ivUpload);
         sub = findViewById(R.id.ivSub);
         library = findViewById(R.id.ivLibrary);
+        user = findViewById(R.id.ivUser);
         addHome();
         home.setOnClickListener(this);
         shorts.setOnClickListener(this);
         upload.setOnClickListener(this);
         sub.setOnClickListener(this);
         library.setOnClickListener(this);
+
+        user.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent user = new Intent(Function.this, UserAccount.class);
+                startActivity(user);
+            }
+        });
     }
 
     @SuppressLint("NonConstantResourceId")
@@ -81,9 +93,14 @@ public class Function extends AppCompatActivity implements View.OnClickListener 
     }
 
     private void addSubscribe() {
-        FragmentTransaction transaction = fragmentManager.beginTransaction();
-        SubscribeFragment subscribeFragment = new SubscribeFragment();
-        transaction.add(R.id.flContainer, subscribeFragment, "fragmentSub").addToBackStack("fragSub").commit();
+        if (SubscribeAdapter.channelSubscribed) {
+            ChannelFragment channelFragment = new ChannelFragment();
+            fragmentManager.beginTransaction().add(R.id.flContainer, channelFragment).commit();
+        } else {
+            FragmentTransaction transaction = fragmentManager.beginTransaction();
+            SubscribeFragment subscribeFragment = new SubscribeFragment();
+            transaction.add(R.id.flContainer, subscribeFragment, "fragmentSub").addToBackStack("fragSub").commit();
+        }
     }
 
     private void addLibrary() {

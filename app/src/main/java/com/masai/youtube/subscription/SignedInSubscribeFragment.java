@@ -1,23 +1,32 @@
 package com.masai.youtube.subscription;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.masai.youtube.R;
+import com.masai.youtube.home.ChannelFragment;
+import com.masai.youtube.home.HomeFragment;
 
 import java.util.ArrayList;
 
 public class SignedInSubscribeFragment extends Fragment {
+
     private RecyclerView recyclerView2;
     private ArrayList<ModelSubscription> arrayList2 = new ArrayList<>();
+    private SwipeRefreshLayout swipeRefreshLayout;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -30,8 +39,21 @@ public class SignedInSubscribeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         recyclerView2 = view.findViewById(R.id.recyclerView);
+        swipeRefreshLayout = view.findViewById(R.id.swipe);
         setData();
         setRecyclerView();
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                if (SubscribeAdapter.channelSubscribed) updateLayout();
+            }
+        });
+    }
+
+    private void updateLayout() {
+        ChannelFragment channelFragment = new ChannelFragment();
+        getParentFragmentManager().beginTransaction().remove(this).commit();
+        getParentFragmentManager().beginTransaction().replace(R.id.flContainer, channelFragment).commit();
     }
 
     private void setRecyclerView() {

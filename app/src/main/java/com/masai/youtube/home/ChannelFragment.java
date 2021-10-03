@@ -50,7 +50,7 @@ public class ChannelFragment extends Fragment {
         ApiService apiService = Network.getInstance().create(ApiService.class);
         apiService.getVideoDetails("AIzaSyDaI4Ku72uiRPFk4pOBbBIC9P3qt7qzmsg",
                 "UCENOACKQiqejXP-bb9sCnMg",
-                "snippet", "date", "10", "video").enqueue(new Callback<VideoModel>() {
+                "snippet", "date", "20", "video").enqueue(new Callback<VideoModel>() {
             @Override
             public void onResponse(Call<VideoModel> call, Response<VideoModel> response) {
                 setRecyclerView(response.body().getItems());

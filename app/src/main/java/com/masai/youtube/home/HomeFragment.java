@@ -45,9 +45,7 @@ public class HomeFragment extends Fragment implements ItemClickListener {
             arrayList.add(new Model("<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/Y77JaKcYROw\" frameborder=\"0\" allowfullscreen></iframe>", R.drawable.nawaz, "Nawazuddin siddiqui motivational speech", "2,899,682 views . Mar 25, 2020", R.drawable.picnawaz,"daily Motivation","2M subscribers"));
             arrayList.add(new Model("<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/Nv7EQ2dmBv8\" frameborder=\"0\" allowfullscreen></iframe>", R.drawable.sony, "Pawandeep की यह Performances हैं Classic", "719,048 views . Sep 7, 2021", R.drawable.singer,"Set india","116M subscribers"));
             arrayList.add(new Model("<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/8yHSAtQ73_8\" frameborder=\"0\" allowfullscreen></iframe>", R.drawable.masiaicon, "Know your Resume and Portfolio #Shorts #Masai", "1,052 views . Sep 23, 2021", R.drawable.masai,"Masai School","12.7K subscribers"));
-
         }
-
     }
 
 

@@ -38,10 +38,7 @@ public class ChannelAdapter extends RecyclerView.Adapter<ChannelAdapter.ChannelV
 
     @Override
     public void onBindViewHolder(@NonNull ChannelViewHolder holder, @SuppressLint("RecyclerView") int position) {
-        holder.videoTitle.setText(items.get(position).getSnippet().getTitle());
         Picasso.get().load(items.get(position).getSnippet().getThumbnails().getHigh().getUrl()).into(holder.videoThumbnail);
-        holder.channelTitle.setText(items.get(position).getSnippet().getChannelTitle());
-
         holder.youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
             @Override
             public void onApiChange(@NonNull com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer youTubePlayer) {
@@ -51,6 +48,10 @@ public class ChannelAdapter extends RecyclerView.Adapter<ChannelAdapter.ChannelV
                     holder.videoThumbnail.setVisibility(View.INVISIBLE);
             }
         });
+        holder.channelImage.setImageResource(R.drawable.masiaicon);
+        holder.videoTitle.setText(items.get(position).getSnippet().getTitle());
+        holder.channelTitle.setText(items.get(position).getSnippet().getChannelTitle());
+        holder.publishTime.setText(items.get(position).getSnippet().getPublishTime());
     }
 
     @Override
@@ -61,15 +62,16 @@ public class ChannelAdapter extends RecyclerView.Adapter<ChannelAdapter.ChannelV
     public static class ChannelViewHolder extends RecyclerView.ViewHolder {
         YouTubePlayerView youTubePlayerView;
         ImageView videoThumbnail, channelImage;
-        TextView videoTitle, channelTitle;
+        TextView videoTitle, channelTitle, publishTime;
 
         public ChannelViewHolder(@NonNull View itemView) {
             super(itemView);
             videoThumbnail = itemView.findViewById(R.id.videoThumbnail);
+            youTubePlayerView = itemView.findViewById(R.id.video);
             channelImage = itemView.findViewById(R.id.channelImage);
             videoTitle = itemView.findViewById(R.id.videoTitle);
             channelTitle = itemView.findViewById(R.id.channelTitle);
-            youTubePlayerView = itemView.findViewById(R.id.video);
+            publishTime = itemView.findViewById(R.id.publishTime);
         }
     }
 }

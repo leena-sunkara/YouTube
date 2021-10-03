@@ -2,4 +2,6 @@
     <string name="app_name">YouTube</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sign_in">Sign In</string>
+    <string name="default_web_client_id_two" translatable="false">283162074485-57shiv7onidieksm9ec876ous91n9gb7.apps.googleusercontent.com</string>
 </resources>

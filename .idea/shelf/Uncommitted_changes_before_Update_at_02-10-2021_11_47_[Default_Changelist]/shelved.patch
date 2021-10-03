@@ -1,0 +1,60 @@
+Index: app/src/main/java/com/masai/youtube/home/HomeAdapter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.masai.youtube.home;\r\n\r\nimport android.view.LayoutInflater;\r\nimport android.view.View;\r\nimport android.view.ViewGroup;\r\nimport android.widget.ImageView;\r\nimport android.widget.RelativeLayout;\r\nimport android.widget.TextView;\r\n\r\nimport androidx.annotation.NonNull;\r\nimport androidx.recyclerview.widget.RecyclerView;\r\n\r\nimport com.masai.youtube.R;\r\n\r\nimport java.util.List;\r\n\r\npublic class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder> {\r\n    List<Model> arrayList;\r\n    ItemClickListener itemClickListener;\r\n\r\n    public HomeAdapter(List<Model> arrayList, ItemClickListener itemClickListener) {\r\n        this.arrayList = arrayList;\r\n        this.itemClickListener = itemClickListener;\r\n    }\r\n\r\n    @NonNull\r\n    @Override\r\n    public HomeViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {\r\n        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_layout, parent, false);\r\n        return new HomeViewHolder(view, itemClickListener);\r\n    }\r\n\r\n    @Override\r\n    public void onBindViewHolder(@NonNull HomeViewHolder holder, int position) {\r\n        Model model = arrayList.get(position);\r\n        holder.setData(model);\r\n    }\r\n\r\n    @Override\r\n    public int getItemCount() {\r\n        return arrayList.size();\r\n    }\r\n\r\n    public static class HomeViewHolder extends RecyclerView.ViewHolder {\r\n        ImageView imageView;\r\n        TextView textView, textView2;\r\n\r\n        ImageView firstImage;\r\n        ItemClickListener itemClickListener;\r\n        RelativeLayout relativeLayout;\r\n\r\n        public HomeViewHolder(@NonNull View itemView, ItemClickListener itemClickListener) {\r\n            super(itemView);\r\n            this.itemClickListener = itemClickListener;\r\n\r\n            firstImage = itemView.findViewById(R.id.video);\r\n            imageView = itemView.findViewById(R.id.youtuberImage);\r\n            textView = itemView.findViewById(R.id.videoName);\r\n            textView2 = itemView.findViewById(R.id.youtubeviews);\r\n            relativeLayout = itemView.findViewById(R.id.relative);\r\n        }\r\n\r\n        public void setData(Model model) {\r\n            firstImage.setImageResource(model.getFirstImage());\r\n            imageView.setImageResource(model.getImage());\r\n            textView.setText(model.getVideoName());\r\n            textView2.setText(model.getViewers());\r\n            relativeLayout.setOnClickListener(new View.OnClickListener() {\r\n                @Override\r\n                public void onClick(View v) {\r\n                    itemClickListener.ItemClicked(model, getAdapterPosition());\r\n                }\r\n            });\r\n        }\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/masai/youtube/home/HomeAdapter.java b/app/src/main/java/com/masai/youtube/home/HomeAdapter.java
+--- a/app/src/main/java/com/masai/youtube/home/HomeAdapter.java	(revision 85f952db3e23ba58db26dbfc19eea2d15ee5e1ed)
++++ b/app/src/main/java/com/masai/youtube/home/HomeAdapter.java	(date 1633155435587)
+@@ -3,6 +3,8 @@
+ import android.view.LayoutInflater;
+ import android.view.View;
+ import android.view.ViewGroup;
++import android.webkit.WebChromeClient;
++import android.webkit.WebView;
+ import android.widget.ImageView;
+ import android.widget.RelativeLayout;
+ import android.widget.TextView;
+@@ -12,6 +14,7 @@
+ 
+ import com.masai.youtube.R;
+ 
++import java.util.ArrayList;
+ import java.util.List;
+ 
+ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder> {
+@@ -27,6 +30,7 @@
+     @Override
+     public HomeViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_layout, parent, false);
++
+         return new HomeViewHolder(view, itemClickListener);
+     }
+ 
+@@ -41,7 +45,7 @@
+         return arrayList.size();
+     }
+ 
+-    public static class HomeViewHolder extends RecyclerView.ViewHolder {
++    public class HomeViewHolder extends RecyclerView.ViewHolder {
+         ImageView imageView;
+         TextView textView, textView2;
+ 
+@@ -65,6 +69,8 @@
+             imageView.setImageResource(model.getImage());
+             textView.setText(model.getVideoName());
+             textView2.setText(model.getViewers());
++
++
+             relativeLayout.setOnClickListener(new View.OnClickListener() {
+                 @Override
+                 public void onClick(View v) {
+@@ -73,4 +79,4 @@
+             });
+         }
+     }
+-}
+\ No newline at end of file
++}

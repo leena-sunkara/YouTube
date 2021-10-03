@@ -1,4 +1,4 @@
-package com.masai.youtube;
+package com.masai.youtube.shorts;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 
 import java.util.ArrayList;
+
+import com.masai.youtube.R;
 
 public class ShortsActivity extends AppCompatActivity {
     private ArrayList<ShortVideoModel> videoModels = new ArrayList<>();

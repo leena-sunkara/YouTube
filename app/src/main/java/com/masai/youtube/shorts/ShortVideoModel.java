@@ -1,4 +1,4 @@
-package com.masai.youtube;
+package com.masai.youtube.shorts;
 
 import android.net.Uri;
 

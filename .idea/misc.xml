@@ -21,6 +21,24 @@
         <entry key="..\:/Users/Leena/Desktop/YouTube/app/src/main/res/layout/fragment_subscribe.xml" value="0.175" />
         <entry key="..\:/Users/Leena/Desktop/YouTube/app/src/main/res/layout/item_layout.xml" value="0.1" />
         <entry key="..\:/Users/Leena/Desktop/YouTube/app/src/main/res/layout/subscription_item_layout.xml" value="0.175" />
+        <entry key="..\:/Temp/app/src/main/res/drawable/ic_outline_home_24.xml" value="0.15989583333333332" />
+        <entry key="..\:/Temp/app/src/main/res/layout/activity_function.xml" value="0.1334853090172239" />
+        <entry key="..\:/Temp/app/src/main/res/layout/activity_main.xml" value="0.12664640324214793" />
+        <entry key="..\:/Temp/app/src/main/res/layout/fragment_home_fagment.xml" value="0.1334853090172239" />
+        <entry key="..\:/Temp/app/src/main/res/layout/fragment_library.xml" value="0.1334853090172239" />
+        <entry key="..\:/Temp/app/src/main/res/layout/fragment_subscribe.xml" value="0.1334853090172239" />
+        <entry key="..\:/YouTube/app/src/main/res/drawable/ic_outline_share_24.xml" value="0.17291666666666666" />
+        <entry key="..\:/YouTube/app/src/main/res/drawable/ic_outline_thumb_down_24.xml" value="0.17291666666666666" />
+        <entry key="..\:/YouTube/app/src/main/res/drawable/ic_outline_thumb_up_24.xml" value="0.17291666666666666" />
+        <entry key="..\:/YouTube/app/src/main/res/layout/activity_video_play.xml" value="0.25" />
+        <entry key="..\:/YouTube/app/src/main/res/layout/fragment_home.xml" value="0.1671875" />
+        <entry key="..\:/YouTube/app/src/main/res/layout/fragment_home_fagment.xml" value="0.1828125" />
+        <entry key="..\:/YouTube/app/src/main/res/layout/fragment_signed_in_subscribe.xml" value="0.1671875" />
+        <entry key="..\:/YouTube/app/src/main/res/layout/fragment_subscribe.xml" value="0.1828125" />
+        <entry key="..\:/YouTube/app/src/main/res/layout/fragment_video_play.xml" value="0.25" />
+        <entry key="..\:/YouTube/app/src/main/res/layout/inside_video_layout.xml" value="0.16197916666666667" />
+        <entry key="..\:/YouTube/app/src/main/res/layout/item_layout.xml" value="0.2" />
+        <entry key="..\:/YouTube/app/src/main/res/layout/subscription_item_layout.xml" value="0.33" />
       </map>
     </option>
   </component>

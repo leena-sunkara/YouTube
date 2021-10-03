@@ -31,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/VIDEONAME"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:paddingBottom="20dp"
             android:textSize="13dp" />
@@ -51,39 +51,35 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:src="@drawable/ic_outline_thumb_up_24" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="35dp"
                     android:src="@drawable/ic_outline_thumb_down_24" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="40dp"
                     android:src="@drawable/ic_baseline_chat_bubble_outline_24" />
 
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="45dp"
+                    android:layout_marginLeft="55dp"
                     android:src="@drawable/ic_baseline_arrow_downward_24" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="45dp"
+                    android:layout_marginLeft="56dp"
                     android:src="@drawable/ic_outline_share_24" />
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="40dp"
-                    android:src="@drawable/ic_baseline_save_alt_24" />
+
             </LinearLayout>
 
         </HorizontalScrollView>
@@ -103,19 +99,19 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:text="12.k" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="40dp"
                     android:text="8" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="30dp"
                     android:text="comment" />
 
 
@@ -128,14 +124,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="25dp"
                     android:text="Share" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="20dp"
-                    android:text="Save" />
+
             </LinearLayout>
 
         </HorizontalScrollView>
@@ -184,16 +176,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/scorll2"
-            android:layout_marginLeft="100dp"
+            android:layout_alignParentEnd="true"
             android:layout_marginTop="25dp"
+            android:layout_marginEnd="20dp"
             android:layout_toRightOf="@+id/cName"
+            android:gravity="end"
             android:text="SUBSCRIBE"
             android:textColor="#EF0606" />
+
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerData"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/tSubscribe"
-            android:layout_marginTop="5dp"
-            android:id="@+id/recyclerData"/>
+            android:layout_marginTop="5dp" />
     </RelativeLayout>
 </RelativeLayout>

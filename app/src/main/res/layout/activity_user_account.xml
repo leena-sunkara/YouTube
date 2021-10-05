@@ -21,8 +21,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="29dp"
-        android:layout_height="27dp"
+        android:layout_width="@dimen/dp_29"
+        android:layout_height="@dimen/dp_27"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.041"
@@ -38,7 +38,7 @@
         android:backgroundTint="@color/blue"
         android:text="@string/sign_in"
         android:textColor="@color/white"
-        app:cornerRadius="5dp"
+        app:cornerRadius="@dimen/dp_5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

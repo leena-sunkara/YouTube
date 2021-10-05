@@ -84,7 +84,6 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
-
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/flContainer"
         android:name="com.google.android.youtube.player.YouTubePlayerSupportFragment"
@@ -93,7 +92,6 @@
         app:layout_constraintBottom_toTopOf="@+id/bottomView"
         app:layout_constraintTop_toBottomOf="@+id/topView"
         tools:layout="@layout/fragment_home" />
-
 
     <androidx.cardview.widget.CardView
         android:id="@+id/bottomView"
@@ -105,9 +103,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="58dp"
-
-            >
+            android:layout_height="58dp">
 
             <ImageView
                 android:id="@+id/ivHome"
@@ -124,13 +120,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
-                android:text="Home"
+                android:text="@string/home"
                 android:textColor="@color/black"
-                android:textSize="10sp"
+                android:textSize="@dimen/sp_10"
                 app:layout_constraintEnd_toEndOf="@id/ivHome"
                 app:layout_constraintStart_toStartOf="@id/ivHome"
                 app:layout_constraintTop_toBottomOf="@id/ivHome" />
-
 
             <ImageView
                 android:id="@+id/ivLibrary"
@@ -147,9 +142,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
-                android:text="Library"
+                android:text="@string/library"
                 android:textColor="@color/black"
-                android:textSize="10sp"
+                android:textSize="@dimen/sp_10"
                 app:layout_constraintEnd_toEndOf="@id/ivLibrary"
                 app:layout_constraintStart_toStartOf="@id/ivLibrary"
                 app:layout_constraintTop_toBottomOf="@id/ivLibrary" />
@@ -167,7 +162,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/plus" />
 
-
             <ImageView
                 android:id="@+id/ivShorts"
                 android:layout_width="23dp"
@@ -183,9 +177,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
-                android:text="Shorts"
+                android:text="@string/shorts"
                 android:textColor="@color/black"
-                android:textSize="10sp"
+                android:textSize="@dimen/sp_10"
                 app:layout_constraintEnd_toEndOf="@id/ivShorts"
                 app:layout_constraintStart_toStartOf="@id/ivShorts"
                 app:layout_constraintTop_toBottomOf="@id/ivShorts" />
@@ -205,16 +199,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
-                android:text="Subscriptions"
+                android:text="@string/subscriptions"
                 android:textColor="@color/black"
-                android:textSize="10sp"
+                android:textSize="@dimen/sp_10"
                 app:layout_constraintEnd_toEndOf="@id/ivSub"
                 app:layout_constraintStart_toStartOf="@id/ivSub"
                 app:layout_constraintTop_toBottomOf="@id/ivSub" />
 
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

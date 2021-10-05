@@ -1,59 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
     tools:context=".home.VideoPlayFragment">
 
-    <RelativeLayout
+    <WebView
+        android:id="@+id/videoPlay"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="@dimen/dp_200" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:layout_below="@+id/videoPlay"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        app:cardCornerRadius="@dimen/dp_50">
 
 
-        <WebView
-            android:id="@+id/videoPlay"
-            android:layout_width="match_parent"
-            android:layout_height="200dp" />
+        <ImageView
+            android:id="@+id/ICONimage"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:src="@mipmap/ic_launcher" />
+    </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardview"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_below="@+id/videoPlay"
-           android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            app:cardCornerRadius="50dp">
+    <TextView
+        android:id="@+id/VIDEONAME"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/videoPlay"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_toEndOf="@+id/cardview"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_20" />
 
+    <TextView
+        android:id="@+id/YOUTUBERVIEW"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/VIDEONAME"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_toEndOf="@+id/cardview"
+        android:paddingBottom="@dimen/dp_20"
+        android:textSize="@dimen/sp_20" />
 
-            <ImageView
-                android:id="@+id/ICONimage"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:src="@mipmap/ic_launcher" />
-        </androidx.cardview.widget.CardView>
-
-        <TextView
-            android:id="@+id/VIDEONAME"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/videoPlay"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_toRightOf="@+id/cardview"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/YOUTUBERVIEW"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/VIDEONAME"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_toRightOf="@+id/cardview"
-            android:paddingBottom="20dp"
-            android:textSize="20sp" />
-
-    </RelativeLayout>
 </RelativeLayout>

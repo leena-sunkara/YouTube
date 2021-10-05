@@ -1,66 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="20dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_marginTop="@dimen/dp_20">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="70dp"
-        android:layout_height="70dp"
         android:id="@+id/cardview2"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        app:cardCornerRadius="80dp">
+        android:layout_width="@dimen/dp_70"
+        android:layout_height="@dimen/dp_70"
+        android:layout_marginStart="@dimen/dp_80"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_20"
+        app:cardCornerRadius="@dimen/dp_80">
+
         <ImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:src="@mipmap/ic_launcher"
-            android:id="@+id/channelImage"/>
+            android:id="@+id/channelImage"
+            android:layout_width="@dimen/dp_70"
+            android:layout_height="@dimen/dp_70"
+            android:src="@mipmap/ic_launcher" />
+
     </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/channelName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="@dimen/dp_45"
+        android:layout_marginTop="@dimen/dp_10"
         android:layout_toEndOf="@+id/cardview2"
-        android:text="Aaj Tak"
+        android:text="@string/aaj_tak"
         android:textColor="@color/black"
-        android:textSize="17sp" />
+        android:textSize="@dimen/sp_17" />
 
     <TextView
         android:id="@+id/viewers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/channelName"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="@dimen/dp_45"
+        android:layout_marginTop="@dimen/dp_10"
         android:layout_toEndOf="@+id/cardview2"
-        android:text="Aaj Tak"
-        android:textSize="15sp" />
+        android:text="@string/aaj_tak"
+        android:textSize="@dimen/sp_15" />
 
     <TextView
         android:id="@+id/uploadVideo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/viewers"
-        android:layout_marginStart="45dp"
+        android:layout_marginStart="@dimen/dp_45"
         android:layout_toEndOf="@+id/cardview2"
-        android:text="Aaj Tak"
-        android:textSize="15sp" />
+        android:text="@string/aaj_tak"
+        android:textSize="@dimen/sp_15" />
 
     <TextView
         android:id="@+id/subscribe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/uploadVideo"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="@dimen/dp_45"
+        android:layout_marginTop="@dimen/dp_10"
         android:layout_toEndOf="@+id/cardview2"
-        android:text="Aaj Tak"
-        android:textColor="#F40606"
-        android:textSize="17sp" />
+        android:text="@string/aaj_tak"
+        android:textColor="@color/red"
+        android:textSize="@dimen/sp_17" />
+
 </RelativeLayout>

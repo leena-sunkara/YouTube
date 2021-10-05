@@ -1,8 +1,44 @@
 <resources>
     <string name="app_name">YouTube</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="sign_in">Sign In</string>
     <string name="default_web_client_id_two" translatable="false">283162074485-57shiv7onidieksm9ec876ous91n9gb7.apps.googleusercontent.com</string>
-    <string name="title_activity_notification">Notification</string>
+    <string name="home">Home</string>
+    <string name="library">Library</string>
+    <string name="shorts">Shorts</string>
+    <string name="subscriptions">Subscriptions</string>
+    <string name="incognito">Turn on Incognito</string>
+    <string name="manage_google_account">Manage your Google Account</string>
+    <string name="name">Name</string>
+    <string name="add_account">Add account</string>
+    <string name="your_channel">Your channel</string>
+    <string name="youtube_studio">YouTube Studio</string>
+    <string name="time_watched">Time watched</string>
+    <string name="get_youtube_premium">Get YouTube Premium</string>
+    <string name="purchases_and_memberships">Purchases and memberships</string>
+    <string name="your_data_in_youTube">Your data in YouTube</string>
+    <string name="help_and_feedback"><![CDATA[Help &amp; Feedback]]></string>
+    <string name="settings">Settings</string>
+    <string name="sign_in">Sign In</string>
+    <string name="twelve_K">12.3k</string>
+    <string name="dislikes">328</string>
+    <string name="download">Download</string>
+    <string name="comment">Comment</string>
+    <string name="share">Share</string>
+    <string name="aaj_tak">Aaj tak</string>
+    <string name="subscriber">Subscriber</string>
+    <string name="subscribe">SUBSCRIBE</string>
+    <string name="history">History</string>
+    <string name="your_videos">Your Videos</string>
+    <string name="downloads">Downloads</string>
+    <string name="zero_videos">0 videos</string>
+    <string name="your_movies">Your Movies</string>
+    <string name="watch_later">Watch Later</string>
+    <string name="save_for_later">Videos you save for later</string>
+    <string name="new_playlist">New Playlist</string>
+    <string name="liked_videos">Liked videos</string>
+    <string name="no_videos">No videos</string>
+    <string name="show">Let\'s show</string>
+    <string name="video_title">Video title will be shown here</string>
+    <string name="five_six">56</string>
+    <string name="dislike">Dislike</string>
+    <string name="three_five_k">35k</string>
 </resources>

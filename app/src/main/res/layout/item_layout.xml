@@ -10,23 +10,23 @@
     <ImageView
         android:id="@+id/video"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="@dimen/dp_200"
         android:scaleType="fitXY"
         android:src="@mipmap/ic_launcher" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
         android:layout_below="@id/video"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        app:cardCornerRadius="40dp">
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        app:cardCornerRadius="@dimen/dp_40">
 
         <ImageView
             android:id="@+id/youtuberImage"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
             android:src="@mipmap/ic_launcher" />
     </androidx.cardview.widget.CardView>
 
@@ -35,21 +35,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/video"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
         android:layout_toEndOf="@+id/cardview"
         android:textColor="@color/black"
-        android:textSize="16sp" />
+        android:textSize="@dimen/sp_16" />
 
     <TextView
         android:id="@+id/youtubeviews"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/videoName"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
         android:layout_toEndOf="@+id/cardview"
-        android:paddingBottom="20dp"
-        android:textSize="12sp" />
+        android:paddingBottom="@dimen/dp_20"
+        android:textSize="@dimen/sp_12" />
 
 </RelativeLayout>

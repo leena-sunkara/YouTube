@@ -48,7 +48,7 @@ public class ChannelAdapter extends RecyclerView.Adapter<ChannelAdapter.ChannelV
                     holder.videoThumbnail.setVisibility(View.INVISIBLE);
             }
         });
-        holder.channelImage.setImageResource(R.drawable.masiaicon);
+        holder.channelImage.setImageResource(R.drawable.masai_icon);
         holder.videoTitle.setText(items.get(position).getSnippet().getTitle());
         holder.channelTitle.setText(items.get(position).getSnippet().getChannelTitle());
         holder.publishTime.setText(items.get(position).getSnippet().getPublishTime());

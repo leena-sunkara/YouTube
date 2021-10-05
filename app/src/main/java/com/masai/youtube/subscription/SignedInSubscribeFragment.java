@@ -1,24 +1,19 @@
 package com.masai.youtube.subscription;
 
-import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.masai.youtube.R;
 import com.masai.youtube.home.ChannelFragment;
-import com.masai.youtube.home.HomeFragment;
 
 import java.util.ArrayList;
 
@@ -65,7 +60,7 @@ public class SignedInSubscribeFragment extends Fragment {
 
     private void setData() {
         for (int i = 0; i < 30; i++) {
-            arrayList2.add(new ModelSubscription(R.drawable.masiaicon, "Masai School", "12.7K subscribers", "131 videos", "SUBSCRIBE"));
+            arrayList2.add(new ModelSubscription(R.drawable.masai_icon, "Masai School", "12.7K subscribers", "131 videos", "SUBSCRIBE"));
             arrayList2.add(new ModelSubscription(R.drawable.aajtak, "Aaj Tak", "47.7M subscribers", "145,482 videos", "SUBSCRIBE"));
             arrayList2.add(new ModelSubscription(R.drawable.sony, "Set india", "116M subscribers", "66,306 videos", "SUBSCRIBE"));
         }

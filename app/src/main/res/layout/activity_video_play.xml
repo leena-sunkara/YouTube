@@ -13,35 +13,34 @@
         <WebView
             android:id="@+id/videoPlay"
             android:layout_width="match_parent"
-            android:layout_height="200dp" />
-
+            android:layout_height="@dimen/dp_200" />
 
         <TextView
             android:id="@+id/VIDEONAME"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/videoPlay"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
             android:textColor="@color/black"
-            android:textSize="16dp" />
+            android:textSize="@dimen/sp_16" />
 
         <TextView
             android:id="@+id/YOUTUBERVIEW"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/VIDEONAME"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:paddingBottom="20dp"
-            android:textSize="13dp" />
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_20"
+            android:textSize="@dimen/sp_13" />
 
         <HorizontalScrollView
             android:id="@+id/scroll"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/YOUTUBERVIEW"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="@dimen/dp_10">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -51,34 +50,33 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="@dimen/dp_20"
                     android:src="@drawable/ic_outline_thumb_up_24" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="35dp"
+                    android:layout_marginStart="@dimen/dp_35"
                     android:src="@drawable/ic_outline_thumb_down_24" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="40dp"
+                    android:layout_marginStart="@dimen/dp_40"
                     android:src="@drawable/ic_baseline_chat_bubble_outline_24" />
 
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="55dp"
+                    android:layout_marginStart="@dimen/dp_55"
                     android:src="@drawable/ic_baseline_arrow_downward_24" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="56dp"
+                    android:layout_marginStart="@dimen/dp_55"
                     android:src="@drawable/ic_outline_share_24" />
-
 
             </LinearLayout>
 
@@ -89,7 +87,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/scroll"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="@dimen/dp_10">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -99,34 +97,32 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="20dp"
-                    android:text="12.k" />
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:text="@string/twelve_K" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="40dp"
-                    android:text="8" />
+                    android:layout_marginStart="@dimen/dp_40"
+                    android:text="@string/dislikes" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="30dp"
-                    android:text="comment" />
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="20dp"
-                    android:text="Download" />
+                    android:layout_marginStart="@dimen/dp_30"
+                    android:text="@string/comment" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="25dp"
-                    android:text="Share" />
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:text="@string/download" />
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp_25"
+                    android:text="@string/share" />
 
             </LinearLayout>
 
@@ -134,17 +130,17 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardview"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
             android:layout_below="@+id/scorll2"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
-            app:cardCornerRadius="40dp">
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_20"
+            app:cardCornerRadius="@dimen/dp_40">
 
             <ImageView
                 android:id="@+id/ICONimage"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
                 android:src="@mipmap/ic_launcher" />
         </androidx.cardview.widget.CardView>
 
@@ -153,42 +149,42 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/scorll2"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_toRightOf="@+id/cardview"
-            android:text="Aaj tak"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_toEndOf="@+id/cardview"
+            android:text="@string/aaj_tak"
             android:textColor="@color/black"
-            android:textSize="16dp" />
+            android:textSize="@dimen/sp_16" />
 
         <TextView
             android:id="@+id/tSubscribe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/cName"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_toRightOf="@+id/cardview"
-            android:paddingBottom="20dp"
-            android:text="Subscriber"
-            android:textSize="13dp" />
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_toEndOf="@+id/cardview"
+            android:paddingBottom="@dimen/dp_20"
+            android:text="@string/subscriber"
+            android:textSize="@dimen/sp_13" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/scorll2"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="20dp"
-            android:layout_toRightOf="@+id/cName"
+            android:layout_marginTop="@dimen/dp_25"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:layout_toEndOf="@+id/cName"
             android:gravity="end"
-            android:text="SUBSCRIBE"
-            android:textColor="#EF0606" />
+            android:text="@string/subscribe"
+            android:textColor="@color/red" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerData"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/tSubscribe"
-            android:layout_marginTop="5dp" />
+            android:layout_marginTop="@dimen/dp_5" />
     </RelativeLayout>
 </RelativeLayout>

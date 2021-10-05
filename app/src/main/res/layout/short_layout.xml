@@ -3,19 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/black"
-    android:gravity="center"
-    android:layout_height="match_parent">
+    android:gravity="center">
+
     <LinearLayout
         android:id="@+id/sho"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
+        android:layout_height="@dimen/dp_0"
+        android:layout_marginBottom="@dimen/dp_8"
         android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/cvUser"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
         <VideoView
             android:id="@+id/shortVideo"
             android:layout_width="match_parent"
@@ -24,69 +26,58 @@
             android:gravity="center"
             tools:ignore="MissingClass" />
 
-
-
     </LinearLayout>
-
-
-
 
     <ProgressBar
         android:id="@+id/progressBar"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
         app:layout_constraintBottom_toBottomOf="@+id/sho"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/sho" />
 
-
-
     <TextView
         android:id="@+id/shortChanelName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginBottom="20dp"
-        android:text="Let's show"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:text="@string/show"
         android:textColor="@color/white"
-        android:textSize="20sp"
-
+        android:textSize="@dimen/sp_20"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/cvUser" />
 
-
     <androidx.cardview.widget.CardView
         android:id="@+id/cvUser"
-        android:layout_width="26dp"
-        android:layout_height="26dp"
-        android:layout_margin="20dp"
-        app:cardCornerRadius="30dp"
+        android:layout_width="@dimen/dp_26"
+        android:layout_height="@dimen/dp_26"
+        android:layout_margin="@dimen/dp_20"
+        app:cardCornerRadius="@dimen/dp_30"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" >
-
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
             android:id="@+id/ivShortChanelProfile"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/ic_baseline_person_24"
-            />
+            app:srcCompat="@drawable/ic_baseline_person_24" />
 
     </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/shortVideoTitle"
-        android:layout_width="300dp"
+        android:layout_width="@dimen/dp_300"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="10dp"
-        android:text="Video title will shown here"
+        android:layout_marginBottom="@dimen/dp_12"
+        android:paddingHorizontal="@dimen/dp_20"
+        android:paddingVertical="@dimen/dp_10"
+        android:text="@string/video_title"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="@dimen/sp_20"
         app:layout_constraintBottom_toTopOf="@+id/shortChanelName"
         app:layout_constraintStart_toStartOf="@id/sho" />
 
@@ -94,15 +85,15 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginBottom="60dp"
+        android:layout_margin="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_12"
+        android:layout_marginBottom="@dimen/dp_60"
         android:background="@android:color/holo_red_light"
-        android:paddingHorizontal="10sp"
-        android:paddingVertical="3sp"
-        android:text="SUBSCRIBE"
+        android:paddingHorizontal="@dimen/sp_10"
+        android:paddingVertical="@dimen/sp_3"
+        android:text="@string/subscribe"
         android:textColor="@color/white"
-        android:textSize="15sp"
+        android:textSize="@dimen/sp_15"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/shortChanelName" />
@@ -111,10 +102,10 @@
         android:id="@+id/shortShare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:text="Share"
+        android:layout_marginBottom="@dimen/dp_12"
+        android:text="@string/share"
         android:textColor="@color/white"
-        android:textSize="10dp"
+        android:textSize="@dimen/sp_10"
         app:layout_constraintBottom_toTopOf="@+id/shortChanelName"
         app:layout_constraintEnd_toEndOf="@+id/ivShortShare"
         app:layout_constraintHorizontal_bias="0.222"
@@ -122,97 +113,88 @@
 
     <ImageView
         android:id="@+id/ivShortShare"
-        android:layout_width="34dp"
-        android:layout_height="34dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="7dp"
+        android:layout_width="@dimen/dp_34"
+        android:layout_height="@dimen/dp_34"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_7"
         android:src="@drawable/ic_baseline_share_24"
         app:layout_constraintBottom_toTopOf="@+id/shortShare"
         app:layout_constraintEnd_toEndOf="parent" />
-
-
 
     <TextView
         android:id="@+id/shortComment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:textSize="10dp"
-        android:text="56"
+        android:text="@string/five_six"
         android:textColor="@color/white"
+        android:textSize="@dimen/sp_10"
         app:layout_constraintBottom_toTopOf="@+id/ivShortShare"
         app:layout_constraintEnd_toEndOf="@+id/ivShortComment"
         app:layout_constraintStart_toStartOf="@+id/ivShortComment" />
+
     <ImageView
         android:id="@+id/ivShortComment"
-        android:layout_width="34dp"
-        android:layout_height="34dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="7dp"
+        android:layout_width="@dimen/dp_34"
+        android:layout_height="@dimen/dp_34"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_7"
         android:src="@drawable/ic_baseline_comment_24"
         app:layout_constraintBottom_toTopOf="@+id/shortComment"
         app:layout_constraintEnd_toEndOf="parent" />
-
-
 
     <TextView
         android:id="@+id/shortDislike"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:textSize="10dp"
-        android:text="Dislike"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:text="@string/dislike"
         android:textColor="@color/white"
+        android:textSize="@dimen/sp_10"
         app:layout_constraintBottom_toTopOf="@+id/ivShortComment"
         app:layout_constraintEnd_toEndOf="@+id/ivShortDislike"
         app:layout_constraintStart_toStartOf="@+id/ivShortDislike" />
+
     <ImageView
         android:id="@+id/ivShortDislike"
-        android:layout_width="34dp"
-        android:layout_height="34dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="7dp"
+        android:layout_width="@dimen/dp_34"
+        android:layout_height="@dimen/dp_34"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_7"
         android:src="@drawable/ic_baseline_thumb_down_24"
         app:layout_constraintBottom_toTopOf="@+id/shortDislike"
         app:layout_constraintEnd_toEndOf="parent" />
-
-
 
     <TextView
         android:id="@+id/shortLike"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:textSize="10dp"
-        android:text="35k"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:text="@string/three_five_k"
         android:textColor="@color/white"
+        android:textSize="@dimen/sp_10"
         app:layout_constraintBottom_toTopOf="@+id/ivShortDislike"
         app:layout_constraintEnd_toEndOf="@+id/ivShortLike"
         app:layout_constraintStart_toStartOf="@+id/ivShortLike" />
+
     <ImageView
         android:id="@+id/ivShortLike"
-        android:layout_width="34dp"
-        android:layout_height="34dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="7dp"
+        android:layout_width="@dimen/dp_34"
+        android:layout_height="@dimen/dp_34"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_7"
         android:src="@drawable/ic_baseline_white_thumb_up_24"
         app:layout_constraintBottom_toTopOf="@+id/shortLike"
         app:layout_constraintEnd_toEndOf="parent" />
 
-
     <ImageView
         android:id="@+id/ivShortMore"
-        android:layout_width="34dp"
-        android:layout_height="34dp"
-        android:layout_marginBottom="15dp"
-        android:layout_marginEnd="10dp"
+        android:layout_width="@dimen/dp_34"
+        android:layout_height="@dimen/dp_34"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_15"
         android:src="@drawable/ic_baseline_more_horiz_24"
         app:layout_constraintBottom_toTopOf="@+id/ivShortLike"
         app:layout_constraintEnd_toEndOf="parent" />
-
-
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

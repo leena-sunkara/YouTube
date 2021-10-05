@@ -15,8 +15,6 @@ public class ShortsActivity extends AppCompatActivity {
     private ArrayList<ShortVideoModel> videoModels = new ArrayList<>();
     private ViewPager2 viewPager2;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +26,6 @@ public class ShortsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_shorts);
         initViews();
         setVideos();
-
 
     }
 
